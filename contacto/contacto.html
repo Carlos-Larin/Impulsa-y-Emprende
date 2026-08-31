@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impulsa y Emprende</title>
+    <title>Contáctanos - Impulsa y Emprende</title>
     <link rel="stylesheet" href="contacto.css">
 </head>
 <body>
@@ -14,12 +14,73 @@
         <nav class="nav-links" aria-label="Navegación principal">
             <a href="../planes/planes.html">Planes</a>
             <a href="../fq/fq.html">FQ</a>
-            <a href="../contacto/contacto.html">Contáctanos</a>
+            <a href="../contacto/contacto.html" class="active">Contáctanos</a>
         </nav>
     </header>
 
-    <main>
-        <p><h1>Contáctanos roberto</h1></p>
+    <main class="contact-container">
+        <section class="contact-card">
+            <h1 class="section-title">¿Hablamos de tu proyecto?</h1>
+            <p class="section-subtitle">Déjanos tus datos o escríbenos directamente para asesorarte con la solución que mejor se adapte a tu emprendimiento.</p>
+
+            <div class="contact-grid">
+                <!-- Formulario -->
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés</label>
+                        <select id="servicio" name="servicio">
+                            <option value="imagen">Imagen profesional</option>
+                            <option value="publicidad">Publicidad digital</option>
+                            <option value="catalogos">Catálogos y material publicitario</option>
+                            <option value="web">Páginas web</option>
+                            <option value="otro">Consulta general</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">¿Cómo podemos ayudarte?</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu negocio o consulta..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+                </form>
+
+                <!-- Panel de información -->
+                <div class="info-box">
+                    <div class="info-group">
+                        <div class="info-item">
+                            <h3>Atención Directa</h3>
+                            <p>Respondemos a tus solicitudes en menos de 24 horas hábiles.</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h3>Correo Electrónico</h3>
+                            <p>contacto@impulsayemprende.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h3>WhatsApp / Teléfono</h3>
+                            <p>+503 7418-2650</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item margin-reset">
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
