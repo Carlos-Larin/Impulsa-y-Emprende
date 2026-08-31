@@ -4,65 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paquete Semilla - Impulsa y Emprende</title>
-  <link rel="stylesheet" href="paquete1.css">
+  <!-- Asegúrate de que el nombre del archivo CSS sea el correcto -->
+  <link rel="stylesheet" href="paquete1.css"> 
 </head>
 <body>
+  <header class="navbar">
+      <a class="logo-button" href="#inicio" aria-label="Ir al inicio">
+          <div class="logo-placeholder" aria-hidden="true"></div>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#planes">Planes</a>
+          <a href="#FQ">Preguntas Frecuentes</a>
+          <a href="#Contactanos">Contáctanos</a>
+      </nav>
+  </header>
 
-  <!-- Contenedor principal para centrar la tarjeta -->
-  <div class="paquete-container">
-    
-    <!-- Tarjeta del Paquete Semilla -->
-    <article class="pricing-card">
-      
-      <div class="card-header">
-        <span class="badge">Ideal para iniciar</span>
-        <h2>Paquete Semilla</h2>
-        <p class="card-desc">Da el primer paso para profesionalizar la imagen de tu negocio.</p>
+  <main>
+      <!-- Contenedor de la tarjeta -->
+      <div class="paquete-container">
+          
+          <article class="pricing-card">
+          
+          <div class="card-header">
+              <span class="badge">Ideal para iniciar</span>
+              <h2>Paquete Semilla</h2>
+              <p class="card-desc">Da el primer paso para profesionalizar la imagen de tu negocio.</p>
+          </div>
+
+          <ul class="features-list">
+              <!-- Ítem 1 -->
+              <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <div class="feature-text">
+                      <strong>Diseño de Logotipo Base</strong>
+                      <span class="feature-detail">Incluye 2 propuestas iniciales y 1 revisión.</span>
+                  </div>
+              </li>
+
+              <!-- Ítem 2 -->
+              <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <div class="feature-text">
+                      <strong>Manual de Marca Básico</strong>
+                      <span class="feature-detail">Incluye paleta de colores, tipografía y uso del logotipo.</span>
+                  </div>
+              </li>
+
+              <!-- Ítem 3 -->
+              <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <div class="feature-text">
+                      <strong>Material Publicitario Inicial</strong>
+                      <details class="feature-details">
+                          <summary>Ver los 3 ítems incluidos</summary>
+                          <div class="details-content">
+                              <p>1. Banner publicitario</p>
+                              <p>2. Tarjetas de presentación (x20)</p>
+                              <p>3. Flyer promocional</p>
+                          </div>
+                      </details>
+                  </div>
+              </li>
+          </ul>
+
+          <div class="card-footer">
+              <a href="#contacto" class="btn-contratar">Solicitar Paquete</a>
+          </div>
+          
+          </article>
       </div>
-
-      <ul class="features-list">
-        <li>
-          <!-- Ícono de check en SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          Diseño de Logotipo Base
-        </li>
-        <li>
-            <p><small>Incluye 2 propuestas iniciales y 1 revisión.</small></p>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          Manual de Marca Básico
-        </li>
-        <li>
-            <p><small>Incluye paleta de colores, tipografía y uso del logotipo.</small></p>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          Material Publicitario Inicial
-        </li>
-        <li>
-            <details>
-                <summary>Material inicial 3 items:</summary>
-                <p>1. Baner publicitario</p>
-                <p>2. Tarjeta de presentación x 20</p>
-                <p>3. Flyer promocional</p>
-            </details>
-        </li>
-      </ul>
-
-      <div class="card-footer">
-        <a href="#contacto" class="btn-contratar">Solicitar Paquete</a>
-      </div>
-
-    </article>
-
-  </div>
-
+  </main>
 </body>
 </html>

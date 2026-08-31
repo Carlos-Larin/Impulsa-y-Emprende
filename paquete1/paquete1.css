@@ -1,103 +1,146 @@
-/* Importar una fuente moderna (opcional pero recomendado) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* =========================================
+   ESTILOS DE LA TARJETA (PAQUETE SEMILLA)
+   ========================================= */
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  background-color: #f3f4f6; /* Fondo gris claro */
+.paquete-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 60px 20px;
 }
 
-/* Contenedor principal */
-.paquete-container {
-  padding: 2rem;
-}
-
-/* Estilos de la Tarjeta */
 .pricing-card {
-  background-color: #ffffff;
+  background: #ffffff;
   width: 100%;
-  max-width: 350px;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 380px;
+  border-radius: 24px;
+  padding: 40px 30px;
+  border: 1px solid rgba(137, 168, 214, 0.22);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e5e7eb;
 }
 
-/* Efecto hover: la tarjeta se levanta un poco */
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
 }
 
-/* Cabecera de la tarjeta */
 .card-header {
   text-align: center;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #f3f4f6;
-  padding-bottom: 1.5rem;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(137, 168, 214, 0.22);
+  padding-bottom: 24px;
 }
 
 .badge {
-  background-color: #dbeafe; /* Azul claro */
-  color: #1d4ed8; /* Azul oscuro */
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e9f2ff; /* Adaptado a tu CSS base */
+  color: #0f67d8;      /* Adaptado a tu CSS base */
+  font-weight: 700;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05em;
 }
 
 .card-header h2 {
-  color: #111827;
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  color: #102a43;
+  margin-bottom: 8px;
 }
 
 .card-desc {
-  color: #6b7280;
+  color: #52637a;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-/* Lista de características */
 .features-list {
   list-style: none;
-  margin-bottom: 2.5rem;
+  margin-bottom: 32px;
 }
 
 .features-list li {
   display: flex;
-  align-items: center;
-  color: #374151;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
-/* Ícono de Check */
 .check-icon {
   width: 24px;
   height: 24px;
-  color: #10b981; /* Verde esmeralda para dar sensación de positividad */
-  margin-right: 12px;
+  color: #0f67d8; /* Azul primario de tu CSS */
+  margin-right: 14px;
   flex-shrink: 0;
 }
 
-/* Pie de la tarjeta y Botón */
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feature-text strong {
+  font-weight: 600;
+  color: #16324f;
+  font-size: 1rem;
+}
+
+.feature-detail {
+  font-size: 0.85rem;
+  color: #52637a;
+  line-height: 1.4;
+}
+
+.feature-details {
+  margin-top: 4px;
+}
+
+.feature-details summary {
+  font-size: 0.85rem;
+  color: #0f67d8;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.feature-details summary:hover {
+  color: #102a43;
+  text-decoration: underline;
+}
+
+.feature-details summary::before {
+  content: "►";
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.feature-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.details-content {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background-color: #f8fbff;
+  border-left: 3px solid #0f67d8;
+  font-size: 0.85rem;
+  color: #52637a;
+  border-radius: 0 8px 8px 0;
+}
+
+.details-content p {
+  margin-bottom: 4px;
+}
+.details-content p:last-child {
+  margin-bottom: 0;
+}
+
 .card-footer {
   text-align: center;
 }
@@ -105,16 +148,208 @@ body {
 .btn-contratar {
   display: inline-block;
   width: 100%;
-  background-color: #2563eb; /* Azul corporativo */
+  background-color: #0f67d8; /* Azul primario de tu CSS */
   color: #ffffff;
   text-decoration: none;
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-contratar:hover {
-  background-color: #1d4ed8; /* Azul más oscuro al pasar el mouse */
+  background-color: #0b51ac;
+  transform: translateY(-2px);
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+	color: #1f2a37;
+	min-height: 100vh;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 40px;
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.logo-placeholder {
+	width: 54px;
+	height: 54px;
+	border: 2px dashed #9db4d6;
+	border-radius: 14px;
+	background: linear-gradient(135deg, #ffffff 0%, #e8f0ff 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.logo-button {
+	display: inline-flex;
+	text-decoration: none;
+	border-radius: 16px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.logo-button:hover {
+	transform: translateY(-2px) scale(1.04);
+	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.logo-button:focus-visible {
+	outline: 3px solid rgba(15, 103, 216, 0.35);
+	outline-offset: 4px;
+}
+
+.logo-button:hover .logo-placeholder {
+	border-color: #0f67d8;
+	background: linear-gradient(135deg, #ffffff 0%, #dcebff 100%);
+	transform: rotate(-2deg);
+	box-shadow: inset 0 0 0 1px rgba(15, 103, 216, 0.08);
+}
+
+.logo-button:hover .logo-placeholder::after {
+	color: #0f67d8;
+}
+
+.logo-placeholder::after {
+	content: "LOGO";
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+	color: #6b7c93;
+}
+
+.nav-links {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #274060;
+	font-weight: 700;
+	transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover {
+	color: #0f67d8;
+	transform: translateY(-1px);
+}
+
+.hero {
+	min-height: auto;
+	display: grid;
+	justify-items: center;
+	align-items: start;
+	padding: 24px 20px 10px;
+}
+
+.hero-content {
+	margin-top: 20px;
+	text-align: center;
+	max-width: 850px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72));
+	border: 1px solid rgba(137, 168, 214, 0.25);
+	box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+	border-radius: 28px;
+	padding: 48px 32px;
+}
+
+.hero-kicker {
+	display: inline-block;
+	margin-bottom: 14px;
+	padding: 8px 14px;
+	border-radius: 999px;
+	background: #e9f2ff;
+	color: #0f67d8;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.hero h1 {
+	font-size: clamp(2.2rem, 5vw, 4.5rem);
+	letter-spacing: 0.08em;
+	color: #102a43;
+	line-height: 1.05;
+}
+
+.hero-text {
+	margin: 18px auto 0;
+	max-width: 640px;
+	font-size: 1.08rem;
+	line-height: 1.8;
+	color: #52637a;
+}
+
+.offer-section {
+	margin-top: 28px;
+	padding: 0 20px 40px;
+}
+
+.section-card {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 34px 30px;
+	border-radius: 24px;
+	background: #ffffff;
+	border: 1px solid rgba(137, 168, 214, 0.22);
+	box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+}
+
+.section-card h2 {
+	font-size: clamp(1.5rem, 3vw, 2.2rem);
+	color: #16324f;
+	margin-bottom: 14px;
+}
+
+.section-card p {
+	font-size: 1.02rem;
+	line-height: 1.8;
+	color: #52637a;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		padding: 16px 18px;
+		gap: 14px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.nav-links {
+		gap: 16px;
+	}
+
+	.hero {
+		min-height: auto;
+		padding-top: 22px;
+	}
+
+	.hero-content,
+	.section-card {
+		padding: 28px 20px;
+		border-radius: 20px;
+	}
+
+	.offer-section {
+		margin-top: 28px;
+		padding-bottom: 40px;
+	}
 }
