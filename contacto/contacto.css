@@ -29,6 +29,11 @@ body {
 	min-height: 100vh;
 	line-height: 1.6;
 	cursor: default;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1; 
 }
 
 .navbar {

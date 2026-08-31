@@ -29,8 +29,13 @@ body {
 	min-height: 100vh;
 	line-height: 1.6;
 	cursor: default;
+	/* ¡NUEVO! Agrega esto para solucionar el footer */
+    display: flex;
+    flex-direction: column;
 }
-
+main {
+    flex: 1; 
+}
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -491,14 +496,6 @@ body {
 .btn-contratar:hover {
   background-color: #0b51ac;
   transform: translateY(-2px);
-}
-
-/* Badge especial para el paquete más vendido */
-.badge:contains("Más popular"), /* Fallback para identificar visualmente */
-.badge-popular {
-    background: #fff7ed; /* Naranja muy claro */
-    color: #ea580c;      /* Naranja corporativo */
-    border: 1px solid #fed7aa;
 }
 .site-footer {
 	margin-top: 20px;

@@ -29,8 +29,13 @@ body {
 	min-height: 100vh;
 	line-height: 1.6;
 	cursor: default;
+	/* ¡NUEVO! Agrega esto para solucionar el footer */
+    display: flex;
+    flex-direction: column;
 }
-
+main {
+    flex: 1; 
+}
 .navbar {
 	display: flex;
 	justify-content: space-between;
