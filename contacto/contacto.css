@@ -19,6 +19,21 @@
 	--shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
+.logo-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px; /* Mantiene los bordes redondeados */
+    object-fit: cover; /* Evita que la imagen se estire o se deforme */
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto cuando pasas el mouse por encima del botón */
+.logo-button:hover .logo-img {
+    transform: rotate(-3deg) scale(1.05); /* Pequeña rotación y zoom */
+    box-shadow: 0 8px 16px rgba(15, 103, 216, 0.2);
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background:
