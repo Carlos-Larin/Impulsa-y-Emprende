@@ -19,7 +19,86 @@
     </header>
 
     <main>
-        <p><h1>Preguntas Frecuentes ANDROMEDA</h1></p>
+        <section class="faq-header">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Encuentra respuestas a las preguntas más comunes sobre nuestros servicios y planes.</p>
+        </section>
+
+        <section class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué servicios ofrece Impulsa y Emprende?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ofrecemos soluciones completas de imagen y publicidad digital para emprendedores y pequeñas empresas. Nuestros servicios incluyen diseño de logos, identidad visual coherente, diseño para redes sociales, catálogos interactivos y estrategias de contenido. Todo está pensado para ayudarte a construir una presencia digital profesional y confiable que atraiga a tu público objetivo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cuáles son los diferentes planes disponibles?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Contamos con tres planes diseñados para diferentes necesidades:</p>
+                    <ul>
+                        <li><strong>Plan 1 - Semilla:</strong> Incluye un logotipo profesional e identidad visual coherente, perfecto para iniciar tu presencia digital.</li>
+                        <li><strong>Plan 2 - Crecimiento:</strong> Diseñado para expandir tu presencia con estrategias de contenido y catálogos interactivos.</li>
+                        <li><strong>Plan 3 - Expansión:</strong> Nuestro plan más completo con todas las herramientas para posicionar tu marca en el mercado.</li>
+                    </ul>
+                    <p>Puedes ver los detalles completos de cada plan visitando nuestra sección de <a href="../planes/planes.html">Planes</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cuál es el tiempo de entrega para los diseños?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Los tiempos de entrega varían según el plan y la complejidad del proyecto. Para el Plan Semilla, generalmente completamos los diseños en 5-7 días hábiles. Los planes de Crecimiento y Expansión pueden tomar entre 2-3 semanas dependiendo del alcance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo es el proceso de trabajo con Impulsa y Emprende?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Nuestro proceso es simple y colaborativo:</p>
+                    <ol>
+                        <li><strong>Selección y Consulta:</strong> Eliges el plan que mejor se adapte a tu negocio (Semilla, Crecimiento o Expansión) y nos contactas para compartir tu visión.</li>
+                        <li><strong>Definición de Objetivos:</strong> Recopilamos la información relevante de tu marca mediante un breve formulario o reunión inicial para iniciar con claridad.</li>
+                        <li><strong>Diseño y Desarrollo:</strong> Nuestro equipo crea tus propuestas visuales y de contenido manteniendo comunicación constante contigo.</li>
+                        <li><strong>Revisión y Ajustes:</strong> Te presentamos los avances y realizamos las correcciones necesarias según las revisiones incluidas en tu plan.</li>
+                        <li><strong>Entrega Final:</strong> Recibes todos los archivos y recursos listos para usar en tus plataformas digitales.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cuál es la política de reembolso si decido no continuar con el proyecto?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Contamos con términos claros para proteger tu inversión en cada etapa del proceso:</p>
+                    <ul>
+                        <li><strong>Cancelación previa:</strong> Si cancelas antes de iniciar la fase de conceptualización o diseño, se reembolsa el 100% de tu anticipo.</li>
+                        <li><strong>Proceso en marcha:</strong> Una vez presentadas las primeras propuestas, el anticipo no es reembolsable debido al tiempo y trabajo creativo ya invertido.</li>
+                        <li><strong>Entrega final:</strong> Tras la aprobación de las propuestas y la entrega de los archivos finales, no se realizan reembolsos.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-footer">
+            <h2>¿Tienes más preguntas?</h2>
+            <p>No dudes en <a href="../contacto/contacto.html">contactarnos</a>. Nuestro equipo está disponible para ayudarte.</p>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -39,5 +118,33 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // FAQ Interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Close other open items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Open first FAQ item by default
+            if (faqItems.length > 0) {
+                faqItems[0].classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
